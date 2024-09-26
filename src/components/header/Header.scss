@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'Bon Voyage DEMO';
+  src: url('/public/fonts/BonfoyageDemo-K7Eo7.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+header {
+  padding: 20px 40px 0px;
+  margin-bottom: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo-container {
+    min-height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .header-logo {
+      font-family: 'Bon Foyage DEMO', sans-serif;
+      color: white;
+      font-size: 3em;
+    }
+
+    .header-routes {
+      font-size: 1.2em;
+      font-weight: lighter;
+      line-height: 133%;
+    }
+  }
+
+  .header-navigation {
+    position: relative;
+    display: flex;
+    align-items: start;
+
+    .navigation-list {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      display: flex;
+      gap: 40px;
+
+      li {
+        a {
+          font-size: 1.2em;
+          font-weight: lighter;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    padding: 20px 20px 0px;
+
+    .logo-container {
+      justify-content: center;
+
+      .header-logo {
+        font-size: 2.5em;
+      }
+      .header-routes {
+        display: none;
+      }
+    }
+
+    .header-navigation {
+      position: relative;
+      display: flex;
+      align-items: start;
+
+      .navigation-list {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+        gap: 40px;
+
+        li {
+          a {
+            font-size: 1.2em;
+            font-weight: lighter;
+          }
+        }
+      }
+    }
+  }
+}

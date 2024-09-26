@@ -1,0 +1,40 @@
+#person-0 {
+  min-height: 200vh;
+  width: 100%;
+  position: relative;
+
+  .first {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    font-family: 'Bon Foyage DEMO', sans-serif;
+    font-size: 10em;
+    color: white;
+  }
+
+  .second {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    font-family: 'Bon Foyage DEMO', sans-serif;
+    font-size: 10em;
+    color: white;
+  }
+
+  .image {
+    z-index: 0;
+    position: absolute;
+    top: 70%;
+    left: 45%;
+  }
+}
+
+.char {
+  color: white;
+}
+
+.blackText {
+  color: black;
+}

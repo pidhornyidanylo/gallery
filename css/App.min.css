@@ -1,0 +1,9 @@
+.hero-banner {
+  background: url('./assets/hero/banner.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 212px;
+  margin-bottom: 61px;
+} /*# sourceMappingURL=App.min.css.map */

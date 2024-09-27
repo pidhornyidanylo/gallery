@@ -1,40 +1,53 @@
 #person-0 {
-  min-height: 200vh;
+  min-height: 150vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
   width: 100%;
   position: relative;
 
-  .first {
-    z-index: 1;
-    position: absolute;
-    top: 50%;
-    left: 0%;
-    font-family: 'Bon Foyage DEMO', sans-serif;
-    font-size: 10em;
-    color: white;
+  .content-container {
+    width: 100%;
+    display: block;
+    position: relative;
+
+    .first {
+      position: absolute;
+      bottom: -200px;
+      left: 30%;
+      transform: translateX(-110%);
+      font-family: 'Bon Foyage DEMO', sans-serif;
+      font-size: 10em;
+      -webkit-transform: translateX(-110%);
+      -moz-transform: translateX(-110%);
+      -ms-transform: translateX(-110%);
+      -o-transform: translateX(-110%);
+      z-index: 1;
+    }
+
+    .second {
+      position: absolute;
+      bottom: -200px;
+      right: -30%;
+      transform: translateX(-110%);
+      font-family: 'Bon Foyage DEMO', sans-serif;
+      font-size: 10em;
+      -webkit-transform: translateX(-110%);
+      -moz-transform: translateX(-110%);
+      -ms-transform: translateX(-110%);
+      -o-transform: translateX(-110%);
+      z-index: 1;
+    }
+
+    .image {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+    }
   }
-
-  .second {
-    z-index: 1;
-    position: absolute;
-    top: 50%;
-    right: 0%;
-    font-family: 'Bon Foyage DEMO', sans-serif;
-    font-size: 10em;
-    color: white;
-  }
-
-  .image {
-    z-index: 0;
-    position: absolute;
-    top: 70%;
-    left: 45%;
-  }
-}
-
-.char {
-  color: white;
-}
-
-.blackText {
-  color: black;
 }

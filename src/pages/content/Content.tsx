@@ -6,49 +6,60 @@ import './Content.scss';
 gsap.registerPlugin(ScrollTrigger);
 
 const Content = () => {
+  const imageRef = useRef<HTMLImageElement | null>(null);
+  const firstRef = useRef<HTMLHeadingElement | null>(null);
+  const secondRef = useRef<HTMLHeadingElement | null>(null);
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const contentRef = useRef<HTMLDivElement | null>(null);
+
   useEffect(() => {
-    gsap.to('.first', {
+    const first = firstRef.current;
+    const second = secondRef.current;
+    const section = sectionRef.current;
+    const content = contentRef.current;
+
+    gsap.to(content, {
       scrollTrigger: {
-        trigger: '#person-0',
-        start: 'top top',
+        trigger: section,
+        markers: true,
+        start: 'top center',
         end: 'center bottom',
-        scrub: 1,
+        scrub: 2,
       },
-      x: '382px',
-      y: '-307px',
+      y: '-600px',
       duration: 0.2,
     });
-    gsap.to('.second', {
+    gsap.to(first, {
       scrollTrigger: {
-        trigger: '#person-0',
-        start: 'top top',
-        end: 'center center',
-        scrub: 1,
+        trigger: section,
+        markers: true,
+        start: 'top center',
+        end: 'center bottom',
+        scrub: 2,
       },
-      y: '71px',
-      x: '-434px',
+      left: '49.8%',
+      top: '-520px',
       duration: 0.2,
     });
-    gsap.to('.image', {
+    gsap.to(second, {
       scrollTrigger: {
-        trigger: '#person-0',
-        start: 'top top',
-        end: 'center center',
-        scrub: 1,
+        trigger: section,
+        markers: true,
+        start: 'top center',
+        end: 'center bottom',
+        scrub: 2,
       },
-      y: '-660px',
-      x: '-220px',
-      duration: 0.1,
+      right: '-7%',
+      top: '-155px',
+      duration: 0.2,
     });
   }, []);
-  const imageRef = useRef(null);
 
   useEffect(() => {
     const chars = document.querySelectorAll('.char');
     const image = imageRef.current;
 
     const checkOverlap = () => {
-      // @ts-ignore
       const imageRect = image!.getBoundingClientRect();
 
       chars.forEach((char) => {
@@ -77,29 +88,31 @@ const Content = () => {
 
   return (
     <div className="scroller">
-      <section id="person-0">
-        <h4 className="first">
-          {Array.from('Stanley').map((char, i) => (
-            <span key={i} className="char">
-              {char}
-            </span>
-          ))}
-        </h4>
-        <h4 className="second">
-          {Array.from('Arinze').map((char, i) => (
-            <span key={i} className="char">
-              {char}
-            </span>
-          ))}
-        </h4>
-        <img
-          ref={imageRef}
-          className="image"
-          width="560px"
-          height="500px"
-          src="/src/assets/content/stanley.jpg"
-          alt="image"
-        />
+      <section ref={sectionRef} id="person-0">
+        <div className="content-container" ref={contentRef}>
+          <h4 ref={firstRef} className="first">
+            {Array.from('Stanley').map((char, i) => (
+              <span key={i} className="char">
+                {char}
+              </span>
+            ))}
+          </h4>
+          <img
+            ref={imageRef}
+            className="image"
+            width="560px"
+            height="500px"
+            src="/src/assets/content/stanley.jpg"
+            alt="image"
+          />
+          <h4 ref={secondRef} className="second">
+            {Array.from('Arinze').map((char, i) => (
+              <span key={i} className="char">
+                {char}
+              </span>
+            ))}
+          </h4>
+        </div>
       </section>
     </div>
   );

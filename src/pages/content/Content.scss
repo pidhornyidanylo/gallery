@@ -7,7 +7,7 @@
   position: relative;
 
   .content-container {
-    width: 100%;
+    width: 100vw;
     display: block;
     position: relative;
 
@@ -26,16 +26,17 @@
     }
 
     .second {
+      height: 100%;
       position: absolute;
       bottom: -200px;
-      right: -30%;
-      transform: translateX(-110%);
+      right: -20%;
+      transform: translateX(110%);
       font-family: 'Bon Foyage DEMO', sans-serif;
       font-size: 10em;
-      -webkit-transform: translateX(-110%);
-      -moz-transform: translateX(-110%);
-      -ms-transform: translateX(-110%);
-      -o-transform: translateX(-110%);
+      -webkit-transform: translateX(110%);
+      -moz-transform: translateX(110%);
+      -ms-transform: translateX(110%);
+      -o-transform: translateX(110%);
       z-index: 1;
     }
 

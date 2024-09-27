@@ -1,7 +1,9 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Content.scss';
+import ActionIcon from '../../components/actionIcon/ActionIcon';
+import LayoutModalDialog from '../../components/modal/Modal';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,7 +23,6 @@ const Content = () => {
     gsap.to(content, {
       scrollTrigger: {
         trigger: section,
-        markers: true,
         start: 'top center',
         end: 'center bottom',
         scrub: 2,
@@ -32,7 +33,6 @@ const Content = () => {
     gsap.to(first, {
       scrollTrigger: {
         trigger: section,
-        markers: true,
         start: 'top center',
         end: 'center bottom',
         scrub: 2,
@@ -44,14 +44,23 @@ const Content = () => {
     gsap.to(second, {
       scrollTrigger: {
         trigger: section,
-        markers: true,
         start: 'top center',
         end: 'center bottom',
         scrub: 2,
       },
-      right: '-7%',
+      right: '49.4%',
       top: '-155px',
       duration: 0.2,
+    });
+    gsap.to('.circleContainerAngled', {
+      scrollTrigger: {
+        trigger: section,
+        start: 'top center',
+        end: 'center bottom',
+        scrub: 2,
+      },
+      duration: 0.5,
+      right: '50%',
     });
   }, []);
 
@@ -86,12 +95,21 @@ const Content = () => {
     });
   }, []);
 
+  const [layout, setLayout] = useState(false);
+
   return (
     <div className="scroller">
       <section ref={sectionRef} id="person-0">
         <div className="content-container" ref={contentRef}>
           <h4 ref={firstRef} className="first">
             {Array.from('Stanley').map((char, i) => (
+              <span key={i} className="char">
+                {char}
+              </span>
+            ))}
+          </h4>
+          <h4 ref={secondRef} className="second">
+            {Array.from('Arinze').map((char, i) => (
               <span key={i} className="char">
                 {char}
               </span>
@@ -105,14 +123,13 @@ const Content = () => {
             src="/src/assets/content/stanley.jpg"
             alt="image"
           />
-          <h4 ref={secondRef} className="second">
-            {Array.from('Arinze').map((char, i) => (
-              <span key={i} className="char">
-                {char}
-              </span>
-            ))}
-          </h4>
+          <ActionIcon
+            text={'Artworks . View Artworks . View Artworks . View'}
+            rotate={true}
+            setLayout={setLayout}
+          />
         </div>
+        <LayoutModalDialog layout={layout} setLayout={setLayout} />
       </section>
     </div>
   );

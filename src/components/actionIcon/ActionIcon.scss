@@ -1,0 +1,96 @@
+.circleContainerAngled {
+  position: absolute;
+  right: 20%;
+  width: 180px;
+  height: 180px;
+  transform: translate(330%, -190%);
+  -webkit-transform: translate(330%, -190%);
+  -moz-transform: translate(330%, -190%);
+  -ms-transform: translate(330%, -190%);
+  -o-transform: translate(330%, -190%);
+  cursor: pointer;
+}
+
+.circleContainer {
+  margin: auto;
+  margin-top: 40px;
+  position: relative;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinningText {
+  animation: spinText 20s linear infinite;
+  -webkit-animation: spinText 20s linear infinite;
+  transform-origin: center;
+}
+
+.arrowContainerVertical {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: moveArrow 2s linear infinite;
+  -webkit-animation: moveArrow 2s linear infinite;
+}
+
+.arrowContainerAngled {
+  position: absolute;
+  top: 54%;
+  left: 45%;
+  transform: translate(-40%, -45%);
+  animation: moveArrowAngle 2s linear infinite;
+  -webkit-animation: moveArrowAngle 2s linear infinite;
+  -webkit-transform: translate(-40%, -45%);
+  -moz-transform: translate(-40%, -45%);
+  -ms-transform: translate(-40%, -45%);
+  -o-transform: translate(-40%, -45%);
+}
+
+@keyframes spinText {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveArrow {
+  from {
+    transform: translate(-50%, -75%);
+    -webkit-transform: translate(-50%, -75%);
+    -moz-transform: translate(-50%, -75%);
+    -ms-transform: translate(-50%, -75%);
+    -o-transform: translate(-50%, -75%);
+  }
+
+  to {
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes moveArrowAngle {
+  //   0% {
+  //     transform: translate(-50%, -50%);
+  //     -webkit-transform: translate(-50%, -50%);
+  //     -moz-transform: translate(-50%, -50%);
+  //     -ms-transform: translate(-50%, -50%);
+  //     -o-transform: translate(-50%, -50%);
+  // }
+
+  //   100% {
+  //     transform: translate(-20%, -60%) rotate(0deg);
+  //     -webkit-transform: translate(-20%, -60%) rotate(0deg);
+  //     -moz-transform: translate(-20%, -60%) rotate(0deg);
+  //     -ms-transform: translate(-20%, -60%) rotate(0deg);
+  //     -o-transform: translate(-20%, -60%) rotate(0deg);
+  // }
+}

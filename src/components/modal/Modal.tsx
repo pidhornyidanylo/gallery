@@ -1,10 +1,11 @@
 import * as React from 'react';
 import Stack from '@mui/joy/Stack';
 import Modal from '@mui/joy/Modal';
-import ModalClose from '@mui/joy/ModalClose';
 import ModalDialog from '@mui/joy/ModalDialog';
+import modalClose from '/src/assets/content/modalClose.svg';
 import DialogContent from '@mui/joy/DialogContent';
 import { Dispatch, SetStateAction } from 'react';
+import './Modal.scss';
 
 type LayoutModalDialogProps = {
   layout: boolean;
@@ -23,7 +24,12 @@ const LayoutModalDialog: React.FC<LayoutModalDialogProps> = ({
           layout="fullscreen"
           sx={{ backgroundColor: 'transparent' }}
         >
-          <ModalClose />
+          <button
+            className="modal-buttonClose"
+            onClick={() => setLayout(false)}
+          >
+            <img src={modalClose} alt="modal-close" />
+          </button>
           <DialogContent></DialogContent>
         </ModalDialog>
       </Modal>

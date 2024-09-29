@@ -1,0 +1,30 @@
+[
+  {
+    "name": {
+      "first": "Stanley",
+      "second": "Arinze"
+    },
+    "photo": "/src/assets/content/stanley.jpg",
+    "artworks": [
+      "/src/assets/content/stanley/1.jpg",
+      "/src/assets/content/stanley/2.jpg",
+      "/src/assets/content/stanley/3.jpg",
+      "/src/assets/content/stanley/4.jpg",
+      "/src/assets/content/stanley/5.jpg"
+    ]
+  },
+  {
+    "name": {
+      "first": "Oscar",
+      "second": "Ukonu"
+    },
+    "photo": "/src/assets/content/stanley.jpg",
+    "artworks": [
+      "/src/assets/content/stanley/1.jpg",
+      "/src/assets/content/stanley/2.jpg",
+      "/src/assets/content/stanley/3.jpg",
+      "/src/assets/content/stanley/4.jpg",
+      "/src/assets/content/stanley/5.jpg"
+    ]
+  }
+]

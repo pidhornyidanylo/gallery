@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Content.scss';
 import ActionIcon from '../../components/actionIcon/ActionIcon';
 import LayoutModalDialog from '../../components/modal/Modal';
+import artists from '/src/artists';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -61,6 +62,18 @@ const Content = () => {
       },
       duration: 0.5,
       right: '50%',
+    });
+    gsap.to('.social-container', {
+      scrollTrigger: {
+        trigger: section,
+        start: 'top center',
+        end: 'center bottom',
+        scrub: 2,
+      },
+      duration: 1,
+      delay: 1,
+      top: '80px',
+      zIndex: 2,
     });
   }, []);
 
@@ -120,7 +133,7 @@ const Content = () => {
             className="image"
             width="560px"
             height="500px"
-            src="/src/assets/content/stanley.jpg"
+            src="/src/assets/content/stanley/stanley.jpg"
             alt="image"
           />
           <ActionIcon
@@ -128,6 +141,11 @@ const Content = () => {
             rotate={true}
             setLayout={setLayout}
           />
+          <div className="social-container">
+            <img src="/src/assets/content/xIcon.svg" alt="x" />
+            <img src="/src/assets/content/instaIcon.svg" alt="instagram" />
+            <img src="/src/assets/content/fbIcon.svg" alt="facebook" />
+          </div>
         </div>
         <LayoutModalDialog layout={layout} setLayout={setLayout} />
       </section>

@@ -1,0 +1,20 @@
+.modal-buttonClose {
+  background-color: transparent;
+  position: fixed;
+  border: none;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  z-index: 2;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -ms-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+}
+
+.modal-buttonClose:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}

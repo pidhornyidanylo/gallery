@@ -1,13 +1,9 @@
 .circleContainerAngled {
   position: absolute;
-  right: 20%;
+  right: 15%;
+  top: -330px;
   width: 180px;
   height: 180px;
-  transform: translate(330%, -190%);
-  -webkit-transform: translate(330%, -190%);
-  -moz-transform: translate(330%, -190%);
-  -ms-transform: translate(330%, -190%);
-  -o-transform: translate(330%, -190%);
   cursor: pointer;
 }
 
@@ -77,20 +73,8 @@
   }
 }
 
-@keyframes moveArrowAngle {
-  //   0% {
-  //     transform: translate(-50%, -50%);
-  //     -webkit-transform: translate(-50%, -50%);
-  //     -moz-transform: translate(-50%, -50%);
-  //     -ms-transform: translate(-50%, -50%);
-  //     -o-transform: translate(-50%, -50%);
-  // }
-
-  //   100% {
-  //     transform: translate(-20%, -60%) rotate(0deg);
-  //     -webkit-transform: translate(-20%, -60%) rotate(0deg);
-  //     -moz-transform: translate(-20%, -60%) rotate(0deg);
-  //     -ms-transform: translate(-20%, -60%) rotate(0deg);
-  //     -o-transform: translate(-20%, -60%) rotate(0deg);
-  // }
+@media(max-width: 1400px) {
+  .circleContainerAngled {
+    display: none;
+  }
 }

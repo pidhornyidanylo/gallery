@@ -1,19 +1,18 @@
-[
-	{
+[{
 		"name": {
 			"first": "Stanley",
 			"second": "Arinze"
 		},
 		"photo": "/src/assets/content/stanley/stanley.jpg",
 		"artworks": [
-			"/src/assets/content/stanley/1.jpg",
-			"/src/assets/content/stanley/2.jpg",
-			"/src/assets/content/stanley/3.jpg",
-			"/src/assets/content/stanley/4.jpg",
-			"/src/assets/content/stanley/5.jpg",
-			"/src/assets/content/stanley/6.jpg",
-			"/src/assets/content/stanley/7.jpg",
-			"/src/assets/content/stanley/8.jpg"
+			"/assets/content/stanley/1.jpg",
+			"/assets/content/stanley/2.jpg",
+			"/assets/content/stanley/3.jpg",
+			"/assets/content/stanley/4.jpg",
+			"/assets/content/stanley/5.jpg",
+			"/assets/content/stanley/6.jpg",
+			"/assets/content/stanley/7.jpg",
+			"/assets/content/stanley/8.jpg"
 		]
 	},
 	{
@@ -23,14 +22,14 @@
 		},
 		"photo": "/src/assets/content/oscar/oscar.jpg",
 		"artworks": [
-			"/src/assets/content/oscar/2.jpg",
-			"/src/assets/content/oscar/1.jpg",
-			"/src/assets/content/oscar/3.jpg",
-			"/src/assets/content/oscar/4.jpg",
-			"/src/assets/content/oscar/5.jpg",
-			"/src/assets/content/oscar/6.jpg",
-			"/src/assets/content/oscar/7.jpg",
-			"/src/assets/content/oscar/8.jpg"
+			"/assets/content/oscar/2.jpg",
+			"/assets/content/oscar/1.jpg",
+			"/assets/content/oscar/3.jpg",
+			"/assets/content/oscar/4.jpg",
+			"/assets/content/oscar/5.jpg",
+			"/assets/content/oscar/6.jpg",
+			"/assets/content/oscar/7.jpg",
+			"/assets/content/oscar/8.jpg"
 		]
 	},
 	{
@@ -40,14 +39,14 @@
 		},
 		"photo": "/src/assets/content/ifeyinwa/Ifeyinwa.jpg",
 		"artworks": [
-			"/src/assets/content/ifeyinwa/2.jpg",
-			"/src/assets/content/ifeyinwa/1.jpg",
-			"/src/assets/content/ifeyinwa/3.jpg",
-			"/src/assets/content/ifeyinwa/4.jpg",
-			"/src/assets/content/ifeyinwa/5.jpg",
-			"/src/assets/content/ifeyinwa/6.jpg",
-			"/src/assets/content/ifeyinwa/7.jpg",
-			"/src/assets/content/ifeyinwa/8.jpg"
+			"/assets/content/ifeyinwa/2.jpg",
+			"/assets/content/ifeyinwa/1.jpg",
+			"/assets/content/ifeyinwa/3.jpg",
+			"/assets/content/ifeyinwa/4.jpg",
+			"/assets/content/ifeyinwa/5.jpg",
+			"/assets/content/ifeyinwa/6.jpg",
+			"/assets/content/ifeyinwa/7.jpg",
+			"/assets/content/ifeyinwa/8.jpg"
 		]
 	},
 	{
@@ -57,14 +56,14 @@
 		},
 		"photo": "/src/assets/content/isimi/Isimi.jpg",
 		"artworks": [
-			"/src/assets/content/isimi/2.jpg",
-			"/src/assets/content/isimi/1.jpg",
-			"/src/assets/content/isimi/3.jpg",
-			"/src/assets/content/isimi/4.jpg",
-			"/src/assets/content/isimi/5.jpg",
-			"/src/assets/content/isimi/6.jpg",
-			"/src/assets/content/isimi/7.jpg",
-			"/src/assets/content/isimi/8.jpg"
+			"/assets/content/isimi/2.jpg",
+			"/assets/content/isimi/1.jpg",
+			"/assets/content/isimi/3.jpg",
+			"/assets/content/isimi/4.jpg",
+			"/assets/content/isimi/5.jpg",
+			"/assets/content/isimi/6.jpg",
+			"/assets/content/isimi/7.jpg",
+			"/assets/content/isimi/8.jpg"
 		]
 	},
 	{
@@ -74,14 +73,14 @@
 		},
 		"photo": "/src/assets/content/nwadiogbu/Nwadiogbu.jpg",
 		"artworks": [
-			"/src/assets/content/nwadiogbu/2.jpg",
-			"/src/assets/content/nwadiogbu/1.jpg",
-			"/src/assets/content/nwadiogbu/3.jpg",
-			"/src/assets/content/nwadiogbu/4.jpg",
-			"/src/assets/content/nwadiogbu/5.jpg",
-			"/src/assets/content/nwadiogbu/6.jpg",
-			"/src/assets/content/nwadiogbu/7.jpg",
-			"/src/assets/content/nwadiogbu/8.jpg"
+			"/assets/content/nwadiogbu/2.jpg",
+			"/assets/content/nwadiogbu/1.jpg",
+			"/assets/content/nwadiogbu/3.jpg",
+			"/assets/content/nwadiogbu/4.jpg",
+			"/assets/content/nwadiogbu/5.jpg",
+			"/assets/content/nwadiogbu/6.jpg",
+			"/assets/content/nwadiogbu/7.jpg",
+			"/assets/content/nwadiogbu/8.jpg"
 		]
 	}
 ]

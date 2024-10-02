@@ -60,11 +60,26 @@
   color: #6e6e6e;
 }
 
+@media(max-width: 1400px) {
+  .artist-name {
+    position: absolute;
+    font-family: 'Bon Foyage DEMO', sans-serif;
+    top: 200px;
+    width: 100%;
+    z-index: 1;
+    font-size: 5em;
+    font-weight: 400;
+    letter-spacing: .12em;
+    text-align: center;
+    color: #6e6e6e;
+  }
+}
+
 @media(max-width: 991px) {
   .artist-name {
     position: absolute;
     font-family: 'Bon Foyage DEMO', sans-serif;
-    top: 100px;
+    top: 150px;
     width: 100%;
     z-index: 1;
     font-size: 3em;

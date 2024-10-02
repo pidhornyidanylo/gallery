@@ -56,12 +56,12 @@ const ArtistSection: React.FC<ArtistSectionProps> = ({
         });
       }
     };
-    window.addEventListener("scroll", debounce(handleResize, 400));
+    window.addEventListener("scroll", debounce(handleResize, 2000, 4000));
     window.addEventListener("resize", debounce(handleResize, 500));
 
     return () => {
-      window.removeEventListener("resize", debounce(handleResize, 400));
-      window.removeEventListener("scroll", debounce(handleResize, 1200));
+      window.removeEventListener("resize", debounce(handleResize, 500));
+      window.removeEventListener("scroll", debounce(handleResize, 2000, 4000));
     };
   });
 
@@ -170,8 +170,9 @@ const ArtistSection: React.FC<ArtistSectionProps> = ({
       }
     };
     handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    window.addEventListener("resize", debounce(handleResize, 2000, 3000));
+    return () =>
+      window.removeEventListener("resize", debounce(handleResize, 2000, 3000));
   }, []);
 
   useEffect(() => {
@@ -191,7 +192,7 @@ const ArtistSection: React.FC<ArtistSectionProps> = ({
           trigger: section,
           start: "top center",
           end: "center bottom",
-          scrub: 2,
+          scrub: 1,
         },
       });
       gsap.to(first, {
@@ -201,8 +202,9 @@ const ArtistSection: React.FC<ArtistSectionProps> = ({
           trigger: section,
           start: "top center",
           end: "center bottom",
-          scrub: true,
+          scrub: 0.5,
         },
+        duration: 0.5,
       });
       gsap.to(second, {
         right:
@@ -215,8 +217,9 @@ const ArtistSection: React.FC<ArtistSectionProps> = ({
           trigger: section,
           start: "top center",
           end: "center bottom",
-          scrub: true,
+          scrub: 0.5,
         },
+        duration: 0.5,
       });
     });
   });

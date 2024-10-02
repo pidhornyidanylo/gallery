@@ -13,7 +13,6 @@ export function debounce<T extends (...args: any[]) => void>(
 		clearTimeout(timer);
 
 		if (maxWait && timeSinceLastInvoke >= maxWait) {
-			// Invoke the function if maxWait has passed since the last call
 			lastInvokeTime = Date.now();
 			func.apply(null, args);
 		} else {

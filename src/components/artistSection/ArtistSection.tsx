@@ -23,7 +23,7 @@ const ArtistSection: React.FC<ArtistSectionProps> = ({
 	artistPhoto,
 	artistWorks,
 }: ArtistSectionProps) => {
-	const [showArtWorksButton, setShowArtWorksButton] = useState(false);
+	const [updateAnimation, setUpdateAnimation] = useState(false);
 	const [hideSection, setHideSection] = useState(false);
 	const [firstNameBlackChars, setFirstNameBlackChars] = useState(0);
 	const [secondNameBlackChars, setSecondNameBlackChars] = useState(0);
@@ -56,11 +56,11 @@ const ArtistSection: React.FC<ArtistSectionProps> = ({
 				});
 			}
 		};
-		window.addEventListener("scroll", debounce(handleResize, 500));
+		window.addEventListener("scroll", debounce(handleResize, 400));
 		window.addEventListener("resize", debounce(handleResize, 500));
 
 		return () => {
-			window.removeEventListener("resize", debounce(handleResize, 500));
+			window.removeEventListener("resize", debounce(handleResize, 400));
 			window.removeEventListener("scroll", debounce(handleResize, 1200));
 		};
 	});
@@ -162,6 +162,19 @@ const ArtistSection: React.FC<ArtistSectionProps> = ({
 	}, [artistSecondName]);
 
 	useEffect(() => {
+		const handleResize = () => {
+			if (window.innerWidth < 1400) {
+				setUpdateAnimation(true);
+			} else {
+				setUpdateAnimation(false);
+			}
+		};
+		handleResize();
+		window.addEventListener("resize", handleResize);
+		return () => window.removeEventListener("resize", handleResize);
+	}, []);
+
+	useEffect(() => {
 		const first = firstRef.current;
 		const second = secondRef.current;
 		const section = sectionRef.current;
@@ -170,10 +183,10 @@ const ArtistSection: React.FC<ArtistSectionProps> = ({
 		const imageRecLeft = image?.getBoundingClientRect().x;
 		const imageRecRight = image?.getBoundingClientRect().right;
 
-		const handleResize = () => {
-			const yTrigger = window.innerWidth < 1400 ? "0px" : "-700px";
+		const mm = gsap.matchMedia();
+		mm.add("(min-width: 1400px)", () => {
 			gsap.to(content, {
-				y: yTrigger,
+				y: "-500px",
 				scrollTrigger: {
 					trigger: section,
 					start: "top center",
@@ -205,28 +218,8 @@ const ArtistSection: React.FC<ArtistSectionProps> = ({
 					scrub: true,
 				},
 			});
-		};
-
-		handleResize();
-		window.addEventListener("resize", handleResize);
-
-		return () => {
-			window.removeEventListener("resize", handleResize);
-		};
-	}, [firstNameBlackChars, secondNameBlackChars]);
-
-	useEffect(() => {
-		const handleResize = () => {
-			if (window.innerWidth < 1400) {
-				setShowArtWorksButton(true);
-			} else {
-				setShowArtWorksButton(false);
-			}
-		};
-		handleResize();
-		window.addEventListener("resize", handleResize);
-		return () => window.removeEventListener("resize", handleResize);
-	}, []);
+		});
+	});
 
 	return (
 		<section
@@ -235,9 +228,6 @@ const ArtistSection: React.FC<ArtistSectionProps> = ({
 			className={hideSection ? "hide" : ""}
 		>
 			<div className="content-container" ref={contentRef}>
-				{/* {showArtWorksButton && (
-          <h5 className='artist-fullname'>{artistFirstName + ' ' + artistSecondName}</h5>
-        )} */}
 				<h4 ref={firstRef} className="first">
 					{Array.from(artistFirstName).map((char, i) => (
 						<span key={i} className={"char" + `${artistFirstName}`}>
@@ -270,7 +260,7 @@ const ArtistSection: React.FC<ArtistSectionProps> = ({
 					<img src="/src/assets/content/xIcon.svg" alt="x" />
 					<img src="/src/assets/content/instaIcon.svg" alt="instagram" />
 					<img src="/src/assets/content/fbIcon.svg" alt="facebook" />
-					{showArtWorksButton && (
+					{updateAnimation && (
 						<button
 							className="artWorksButton"
 							onClick={() => {

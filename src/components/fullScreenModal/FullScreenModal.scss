@@ -108,3 +108,10 @@
     object-fit: contain;
   }
 }
+
+@media(max-width: 578px) {
+  .artist-name {
+    top: 60px;
+    font-size: 2em;
+  }
+}

@@ -3,16 +3,16 @@
 			"first": "Stanley",
 			"second": "Arinze"
 		},
-		"photo": "../../assets/content/stanley/stanley.jpg",
+		"photo": "/assets/content/stanley/stanley.jpg",
 		"artworks": [
 			"/assets/content/stanley/1.jpg",
 			"/assets/content/stanley/2.jpg",
 			"/assets/content/stanley/3.jpg",
-			"../../assets/content/stanley/4.jpg",
-			"../../assets/content/stanley/5.jpg",
-			"../../assets/content/stanley/6.jpg",
-			"../../assets/content/stanley/7.jpg",
-			"../src/assets/content/stanley/8.jpg"
+			"/assets/content/stanley/4.jpg",
+			"/assets/content/stanley/5.jpg",
+			"/assets/content/stanley/6.jpg",
+			"/assets/content/stanley/7.jpg",
+			"/assets/content/stanley/8.jpg"
 		]
 	},
 	{
@@ -20,7 +20,7 @@
 			"first": "Oscar",
 			"second": "Ukonu"
 		},
-		"photo": "/src/assets/content/oscar/oscar.jpg",
+		"photo": "/assets/content/oscar/oscar.jpg",
 		"artworks": [
 			"/assets/content/oscar/2.jpg",
 			"/assets/content/oscar/1.jpg",
@@ -37,7 +37,7 @@
 			"first": "Ifeynwa",
 			"second": "Chiamonwu"
 		},
-		"photo": "/src/assets/content/ifeyinwa/Ifeyinwa.jpg",
+		"photo": "/assets/content/ifeyinwa/Ifeyinwa.jpg",
 		"artworks": [
 			"/assets/content/ifeyinwa/2.jpg",
 			"/assets/content/ifeyinwa/1.jpg",
@@ -54,7 +54,7 @@
 			"first": "Isimi",
 			"second": "Taiwo"
 		},
-		"photo": "/src/assets/content/isimi/Isimi.jpg",
+		"photo": "/assets/content/isimi/Isimi.jpg",
 		"artworks": [
 			"/assets/content/isimi/2.jpg",
 			"/assets/content/isimi/1.jpg",
@@ -71,7 +71,7 @@
 			"first": "Nwadiogbu",
 			"second": "Kenechukwu"
 		},
-		"photo": "/src/assets/content/nwadiogbu/Nwadiogbu.jpg",
+		"photo": "/assets/content/nwadiogbu/Nwadiogbu.jpg",
 		"artworks": [
 			"/assets/content/nwadiogbu/2.jpg",
 			"/assets/content/nwadiogbu/1.jpg",

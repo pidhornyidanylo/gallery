@@ -2,7 +2,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import type React from "react";
 import { useEffect, useRef, useState } from "react";
-import artIcon from "../../assets/content/images-svgrepo-com.svg";
+import artIcon from "/public/assets/content/images-svgrepo-com.svg";
 import { debounce } from "../../utils/debounce";
 import ActionIcon from "../actionIcon/ActionIcon";
 import FullScreenModal from "../fullScreenModal/FullScreenModal";
@@ -257,9 +257,9 @@ const ArtistSection: React.FC<ArtistSectionProps> = ({
           onClick={setHideSection}
         />
         <div className="social-container">
-          <img src="/src/assets/content/xIcon.svg" alt="x" />
-          <img src="/src/assets/content/instaIcon.svg" alt="instagram" />
-          <img src="/src/assets/content/fbIcon.svg" alt="facebook" />
+          <img src="/assets/content/xIcon.svg" alt="x" />
+          <img src="/assets/content/instaIcon.svg" alt="instagram" />
+          <img src="/assets/content/fbIcon.svg" alt="facebook" />
           {updateAnimation && (
             <button
               className="artWorksButton"

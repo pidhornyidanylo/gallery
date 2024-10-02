@@ -9,7 +9,7 @@ import type { Dispatch, SetStateAction } from 'react';
 import type SwiperCore from 'swiper';
 import { Mousewheel } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import modalClose from '/src/assets/content/modalClose.svg';
+import modalClose from '/public/assets/content/modalClose.svg';
 import './FullScreenModal.scss';
 import 'swiper/css';
 
